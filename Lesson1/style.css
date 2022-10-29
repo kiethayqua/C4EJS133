@@ -21,6 +21,13 @@ body {
     right: 20px;
 }
 
+.return
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
 .content h2 {
     margin-top: 10px;
 }
