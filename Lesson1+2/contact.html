@@ -6,25 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact me page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <h1>Resume</h1>
     <h2>Bob</h2>
     <img alt="avatar" src="./images/avatar.png">
-    <hr>
+    <span></span>
     <p>Leave me a message</p>
-    <form action="">
-        <label for="email">Your email</label>
-        <br>
-        <input id="email" type="text" name="email">
-        <br>
-        <label for="message">Message</label>
-        <br>
-        <textarea id="message" placeholder="Your message here" name="message" rows="5"></textarea>
-        <br>
-        <input type="submit">
-    </form>
+    <div >
+        <form action="" class="form">
+            <div class="form-notify">
+                <label for="email" class="form-label">Your email</label>
+                <br>
+                <input id="email" type="text" name="email" class="form-input">
+            </div>
+            <div class="form-notify">
+                <label for="message" class="form-label">Message</label>
+                <br>
+                <textarea id="message" placeholder="Your message here" name="message" rows="5" class="form-input"></textarea>
+            </div>
+           
+           
+           <div class="form-submit">
+            <input type="submit" class="input-submit">
+           </div>
+          
+        </form>
+    </div>
+    
 </body>
 
 </html>
