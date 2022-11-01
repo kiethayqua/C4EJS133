@@ -1,0 +1,31 @@
+*{
+    font-family: sans-serif;
+    background-color: rgb(134, 241, 241);
+}
+img{
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+hr{
+    margin: 15px;
+    margin-left: 0;
+    border-bottom-width: 3px;
+    border-style: dashed;
+    border-width: thick;
+    color: rgb(255, 0, 0);
+    width: 80%;
+}
+form #email{
+    background-color:aliceblue;
+}
+form #submit{
+    background-color: rgb(255, 151, 151);
+}
+form #message{
+    background-color: aliceblue;
+}
+p{
+    color:rgb(95, 65, 150);
+    font-weight: bold;
+}
