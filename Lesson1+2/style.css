@@ -1,0 +1,47 @@
+
+*{
+    font-family: sans-serif;
+    margin-left: 5px;
+}
+
+body{
+    background-color: rgb(223, 238, 240);
+    color: rgb(104,140,142);
+    font-weight: bold !important;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+ul{
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
+
+img{
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+
+.dashedline{
+    border:0;
+    border-color: rgb(78, 59, 59);
+    border-bottom-width: 5px;
+    border-style: dashed;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 85%;
+}
+
+a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.linked{
+    text-decoration: none;
+    color: black;
+}
