@@ -5,3 +5,40 @@ body {
 p {
     color: red;
 }
+
+h1 {
+    color: #ff8000;
+}
+
+h2 {
+    color: #163552;
+}
+
+h3 {
+    color: #163552;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.ava {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    align-con;
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+}
