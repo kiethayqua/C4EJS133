@@ -23,7 +23,9 @@ a {
 
 /* style here */
 .header {
-    padding: 10px;
+    position: sticky;
+    top: 0;
+    padding: 0 100px;
     background-color: #ddd;
     margin-bottom: 32px;
 }
@@ -67,5 +69,9 @@ a {
 .click-to-top-btn {
     width: 50px;
     height: 50px;
+
     background-color: #aaa;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
