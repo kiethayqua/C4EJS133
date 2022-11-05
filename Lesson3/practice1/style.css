@@ -26,13 +26,24 @@
 
 /* style here */
 #cell-block1 {
+    right:2px;
+    bottom:2px;
 }
 
 #cell-block2 {
+    right:2px;
+    top:1.3px;
 }
 
 #cell-block3 {
+    bottom:2px;
+    left:2px;
 }
 
 #cell-block4 {
+    /* top:69px;
+    left:69px; */
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
