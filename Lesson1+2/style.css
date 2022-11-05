@@ -29,7 +29,7 @@ h3 {
 }
 
 img {
-    display: block;
+    display:block ;
     margin-left: auto;
     margin-right: auto;
     height: 100px;
@@ -37,7 +37,13 @@ img {
     border-radius: 50%;
 }
 
-.column {}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Clear floats after the columns */
 .row {
