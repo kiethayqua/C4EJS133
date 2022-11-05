@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    padding: 0 100px;
+
+}
+
+.header {
+    padding: 10px;
+    background-color: #ddd;
+    margin-bottom: 32px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    flex: 1;
+}
+
+.link {
+    height: 50px;
+    width: 80px;
+}
+
+.link:hover {
+    color: orange;
+}
+
+.footer {
+    margin-top: 32px;
+    padding: 20px;
+    background-color: gray;
+}
+
+.footer p {
+    font-weight: bold;
+}
+
+/* style here */
+.click-to-top-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #aaa;
+}

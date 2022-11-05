@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-wrapper {
+    position: relative;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+
+.missing-cell {
+    background-color: #ddd;
+}
+
+.cell-highlight {
+    background-color: yellow;
+    position: absolute;
+    border: 1px solid black;
+    padding: 1;
+}
+
+/* style here */
+#cell-block1 {
+}
+
+#cell-block2 {
+}
+
+#cell-block3 {
+}
+
+#cell-block4 {
+}
