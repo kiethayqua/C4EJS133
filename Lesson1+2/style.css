@@ -1,0 +1,58 @@
+body {
+    background-color: #afd1ed;
+    font-family: sans-serif;
+}
+
+h1, h2, p {
+    color: #296481;
+}
+
+a {
+    text-decoration: none;
+    color: black;   
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    font-weight: bold;
+}
+
+img {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;  
+}
+
+.bottom-line {
+    border: 0;
+    border-bottom-width: 5px;
+    border-color: #296481;
+    border-style: dashed;
+    width: 80%;
+}
+
+.color-red {
+    color: red;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+nhung thuoc tinh su dung nhieu
+- width
+- height
+- margin
+- padding
+- border
+- background-color
+- color
+- font
+*/
