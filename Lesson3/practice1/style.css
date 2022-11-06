@@ -26,13 +26,19 @@
 
 /* style here */
 #cell-block1 {
+    bottom: 0;   
+    right: 0;
 }
 
 #cell-block2 {
+    right: 0;
 }
 
 #cell-block3 {
+    bottom: 0;
 }
 
 #cell-block4 {
+    right: 70px;
+    top: 70px;
 }
