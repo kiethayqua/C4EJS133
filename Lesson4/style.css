@@ -1,0 +1,133 @@
+.topLeft {
+    /* Element 01 */
+
+
+    position: absolute;
+    width: 327.8px;
+    height: 303.38px;
+    left: 225.03px;
+    top: -122.37px;
+
+    /* Gradient */
+
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+    transform: matrix(-0.89, -0.45, -0.45, 0.89, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #5C5C5C;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    background-color: gray;
+    height: 100%;
+}
+
+.log-container {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF7DF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blank {
+    width: 100%;
+    height: 100%;
+    background-color: #C4C4C4;
+}
+
+.do-you-know {
+    /* width: 60%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.lightBulb {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+    border-radius: 50%;
+}
+
+#doYou {
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.logo-line {
+    font-size: 22px;
+    font-family: serif;
+}
+
+.logo-line b {
+    text-decoration: none;
+    color: orange;
+}
+
+#logo {
+    height: 36px;
+}
+
+.input-fill {
+    width: 423px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+    margin: 5px;
+    border: 1px solid #EFEFEF;
+}   
+
+.sign-in-link {
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-image: linear-gradient(90deg,#FF8F2B, #FFB930);
+    width: 423px;
+    height: 60px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    margin-top: 34px;
+    box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+}
+
+button:hover {
+    opacity: 60%;
+}
+
+a {
+    color: orange;
+}
+
+.margin29 {
+    margin-bottom: 29px;
+}
