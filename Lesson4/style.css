@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Proxima Nova';
+    color: #5C5C5C;
+    
+}
+
+.Body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.Main {
+    width: 50%;
+    background-color: #FFF7DF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Main_goge{
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.Main_SignIn{
+    margin-top: 37.27px;
+}
+
+.Aside{
+    background-color: #C4C4C4;
+    flex-grow: 1;
+}
+
+.Main_Form{
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Main_Form_SignUp{
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn{
+    margin-top: 20px;
+    width: 423px;
+    height: 60px;
+    /* border: 1px dotted black; */
+    border-radius: 100px;
+    /* 1 */
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+    /* 3 */
+    box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+    border: none;
+}
+
+.Inp{
+    width: 423px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #EFEFEF;
+    outline: none;
+    padding: 0 20px;
+}
+
+label, input {
+    display: block;
+}
+
+form div label{
+    margin-bottom: 9px;
+}
+
+.Font_color{
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
