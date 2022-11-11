@@ -1,0 +1,101 @@
+*{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 150vh;
+}
+.left_page{
+    background-color: #ffa60060;
+    width: 50%;
+    height: 100%;
+}
+.right_page{
+    background-color: #C4C4C4;
+    width: 50%;
+    height: 100%;
+}
+.Logo{
+    margin: 0;
+    margin-top: 284.82px;
+    display: flex;
+    justify-content: center;
+    gap: 6.28px;
+}
+.Logo_content{
+    display: flex;
+    justify-content: center;
+}
+.Logo_content__p{
+    color : #ffa600;
+}
+.SIC{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 37.27px;
+    margin-bottom: 20px;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    line-height: 17px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input_content{
+    width: 423px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    border-radius: 100px;
+    display: flex;
+    margin: 0;
+    margin-top: 9px;
+    padding: 20px;
+}
+.input_content2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8.5px;
+}
+.checkacc{
+    justify-content: flex-end;
+}
+.SU{
+    font-family: 'Proxima Nova';
+    size: 12px;
+    line-height: 14.62px;
+    color: #FFC000;
+}
+button{
+    width: 423px;
+    height: 60px;   
+    border-radius: 100px;
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+    box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+    border-radius: 100px;
+    margin: 0;
+    margin-top: 55px;
+}
+.page2{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.dou{
+    text-align: center;
+    height: 52px;
+    width: 299px;
+    font-family: "proxima-nova";
+    font-size: 14px;
+    line-height: 17.05px;
+    color: whitesmoke;
+}
+
+
