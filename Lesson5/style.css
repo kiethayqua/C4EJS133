@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+   
+    
+}
+body{
+  
+    padding: 0;
+    margin: 0;
+}
+.container{
+    
+    width: 100%;
+    height: 100vh;
+}
+.container .home{
+
+    background: blue;
+ height: 80px;
+}
+.text-input{
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-input p {
+    font-weight: bold;
+    font-size: 20px;
+}
+.text-input .btn{
+    cursor: pointer;
+    padding: 8px 20px;
+    background: none;
+    color: rgb(35, 151, 239);
+    border:2px solid rgb(35, 151, 239) ;
+    border-radius: 3px;
+}
+.infomation{
+    display: flex;
+    padding: 0 23%;
+}
+
+.infomation .info{
+    padding: 0 10px;
+    width: 250px;
+}
+
+.info-text p:nth-child(1){
+    font-weight: bold;
+}
+.info-text p:nth-child(2){
+ font-size: 16px;
+ font-weight: 500;
+}
+
+@media (max-width:991px) {
+    .infomation{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .infomation .info{
+        width: 50%;      
+        padding: 10px 24px;
+        
+    }
+}
+
+@media (max-width : 768px) {
+    .infomation{
+        padding: 0;
+       flex-direction: column;
+    }
+    .infomation .info{   
+        padding: 10px 24px;
+        width: 100%;
+        flex: 1;
+    }
+    .text-input p {
+        padding: 0 24px;
+        font-size: 18px;
+    }
+}
