@@ -7,24 +7,65 @@ html {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: auto;
+    height: 100vh;
     margin: 0 auto;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .top-bg {
+    height: 100px;
+    width: 100%;
     background-color: blue;
-    display: flex;
-    position:
 }
 
 .bot-bg {
-    display: flex;
-    flex: 1;
-    padding: 10px;
+    align-items: flex-end;
+    height: 100px;
+    width: 100%;
     background-color: black;
 }
 
-h3 {
-    justify-content: center;
+.intro {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wrapper {
     align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card {
+    margin-right: 24px;
+}
+
+.button {}
+
+.item {
+    display: flex;
+    padding: 0 100px;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        padding: 0 25px;
+    }
+
+    .item-card {
+        width: 100%;
+        flex: 1;
+        margin-bottom: 32px;
+    }
 }
