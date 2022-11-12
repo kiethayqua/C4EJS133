@@ -72,3 +72,25 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+
+#test {
+    width: 100%
+}
+
+@media (min-width: 576px) {
+    #test {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    #test {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    #test {
+        width: 25%%;
+    }
+}
