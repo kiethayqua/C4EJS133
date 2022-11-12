@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bg {
+    background-color: blue;
+    display: flex;
+    position:
+}
+
+.bot-bg {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    background-color: black;
+}
+
+h3 {
+    justify-content: center;
+    align-items: center;
+}
