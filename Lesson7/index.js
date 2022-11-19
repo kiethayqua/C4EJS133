@@ -1,6 +1,5 @@
 // print all elements
-function print(arr)
-{
+function print(arr) {
     arr.forEach(x => console.log(x));
 }
 
@@ -9,7 +8,7 @@ function print(arr)
 //     console.log(i);
 // }
 
-let arr = Array.from({length: 100}, (_,i) => i +1);
+let arr = Array.from({ length: 100 }, (_, i) => i + 1);
 print(arr);
 
 // Bài 2: In ra màn hình các số từ 1..100 theo thứ tự giảm dần
@@ -20,15 +19,14 @@ print(arr.reverse());
 
 let n = 10;
 
-for (let i = 1; i <= n; i++) 
-{
+for (let i = 1; i <= n; i++) {
     if (i & 1) continue;
     console.log(i);
 }
 
 // Bài 4: Cho số nguyên n bất kì, in các số lẻ từ 1..n
 
-for (let i = 1; i <= n; i++) 
+for (let i = 1; i <= n; i++)
     if (i & 1)
         console.log(i);
 
@@ -44,7 +42,7 @@ console.log(tmp);
 
 tmp = 0;
 for (let i = 1; i <= n; i++)
-    tmp += i*(i+1);
+    tmp += i * (i + 1);
 
 
 console.log(tmp);
@@ -72,8 +70,7 @@ console.log(tmp);
 // **
 // *
 n = 5;
-for (let i = 0; i < n; i++)
-{
+for (let i = 0; i < n; i++) {
     let tmp = "";
     for (let j = 1; j <= n - i; j++) tmp += "*";
     console.log(tmp);
@@ -89,32 +86,33 @@ for (let i = 0; i < n; i++)
 // Số được chọn là: <number>
 // Số lần bạn đoán là: <number>
 
-let rand = Math.floor(Math.random() * 10), tries = 0, box;
+let rand, tries, box;
+function init() {
+    rand = Math.floor(Math.random() * 10);
+    tries = 0;
+}
 
-function myFunction() 
-{
+init();
+function myFunction() {
     console.log(rand);
 
-    if(tries == 0)
+    if (tries == 0)
         box = prompt("Nhập số:");
     else
-        box = prompt("Bạn đã đoán sai! Thử lại:");    
+        box = prompt("Bạn đã đoán sai! Thử lại:");
 
-    if (box != null) 
-    {
-        if(box != rand)
-        {   
+    if (box != null) {
+        if (box != rand) {
             document.getElementById("demo").innerHTML =
-            box + " is NOT that secret number!";
+                box + " is NOT that secret number!";
             tries++;
         }
-        else
-        {
-            let ans = `Bạn đã đoán đúng!<br>` + 
-                      `Số được chọn là: ${rand}<br>` + 
-                      `Số lần bạn đoán là: ${tries + 1}<br>`;
+        else {
+            let ans = `Bạn đã đoán đúng!<br>` +
+                `Số được chọn là: ${rand}<br>` +
+                `Số lần bạn đoán là: ${tries + 1}<br>`;
             document.getElementById("demo").innerHTML = ans;
-            tries = 0, rand = Math.floor(Math.random() * 10);
+            init();
         }
     }
 }
