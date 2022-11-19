@@ -89,7 +89,7 @@ for (let i = 0; i < n; i++)
 // Số được chọn là: <number>
 // Số lần bạn đoán là: <number>
 
-let rand = Math.floor(Math.random() * 9), tries = 0, box;
+let rand = Math.floor(Math.random() * 10), tries = 0, box;
 
 function myFunction() 
 {
@@ -114,7 +114,7 @@ function myFunction()
                       `Số được chọn là: ${rand}<br>` + 
                       `Số lần bạn đoán là: ${tries + 1}<br>`;
             document.getElementById("demo").innerHTML = ans;
-            tries = 0, rand = Math.floor(Math.random() * 9);
+            tries = 0, rand = Math.floor(Math.random() * 10);
         }
     }
 }
