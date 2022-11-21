@@ -37,7 +37,7 @@ console.log(checkAge);
 /*
 Viết cấu trúc switch-case kiểm tra số chẳn và lẻ
 */
-let x = 1011;
+let x = 1011                        ;
 var check;
 switch (x % 2) {
     case 0:
@@ -46,5 +46,5 @@ switch (x % 2) {
     default:
         check = 'lẻ'
     // code block
-}
+}   
 console.log(check); 
