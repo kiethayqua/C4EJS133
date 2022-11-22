@@ -61,3 +61,80 @@ const developers = [
         skills: ['Assembly', 'C', 'C++']
     }
 ];
+
+function maxAge(devs) {
+    let max = 0;
+    let dev = null;
+
+    devs.forEach((item) => {
+        if (item.age > max) {
+            max = item.age;
+            dev = item;
+        }
+    });
+
+    return dev;
+}
+// console.log(maxAge(developers));
+
+function sortAge(devs) {
+    return [...devs].sort((dev1, dev2) => dev1.age - dev2.age);
+}
+
+// console.log(sortAge(developers));
+
+function filterMales(devs) {
+    return devs.filter(item => item.gender === 'male');
+}
+// console.log(filterMales(developers));
+
+function sumAge(devs) {
+    let ages = 0;
+    devs.forEach(dev => {
+        ages += dev.age;
+    });
+    return ages;
+}
+// console.log(sumAge(developers));
+
+function allSkills(devs) {
+    let skills = new Set();
+    devs.forEach(dev => {
+        dev.skills.forEach(skill => {
+            skills.add(skill);
+        });
+    });
+
+    return skills;
+}
+// console.log(allSkills(developers));
+
+function filterGender(devs) {
+    // C1:
+    // let males = [], females = [];
+    // devs.forEach(dev => {
+    //     if (dev.gender === 'male') {
+    //         males.push(dev);
+    //     } else {
+    //         females.push(dev);
+    //     }
+    // });
+
+    // return {
+    //     males,
+    //     females
+    // }
+
+    // C2:
+    return devs.reduce((obj, dev) => {
+        const newDev = [dev];
+        if (!obj[dev.gender]) {
+            obj[dev.gender] = newDev;
+        } else {
+            obj[dev.gender] = [...obj[dev.gender], ...newDev];
+        }
+        return obj;
+    }, {});
+}
+
+console.log(filterGender(developers));
