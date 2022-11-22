@@ -102,8 +102,33 @@ alert(`
     Số lần bạn đoán là: ${guessCount}
 `)
 
+function factorial(x){
+    if(x === 0 ){
+        return 1;
+    }
+
+    else{
+        return x*factorial(x-1);
+    }
+}
+const num = 3;
+if(num > 0){
+    let result = factorial(num);
+    console.log(`The factorial of ${num} is ${result}`);
+}
+
+// array
+const list = [];
+const integer = [1,2, 4, 3];
+const stringArray = [`eat`, `work`, `sleep`];
+
+//mix data type;
+
+const newData = [`work`, `exercises`, 1, true]
 
 
+console.log(integer[0])
+console.log(list[0]);
 
-
-
+console.log(newData[0]);
+console.log(newData[3]);
