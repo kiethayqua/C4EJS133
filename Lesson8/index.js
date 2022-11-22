@@ -32,7 +32,7 @@ const developers = [
     },
     {
         name: "Nguyễn Văn Tèo",
-        age: 20,
+        age: 25,
         gender: 'male',
         skills: ['Swift', 'Java', 'Kotlin', 'JS']
     },
@@ -59,5 +59,5 @@ const developers = [
         age: 23,
         gender: 'female',
         skills: ['Assembly', 'C', 'C++']
-    },
+    }
 ];
