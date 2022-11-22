@@ -61,3 +61,100 @@ const developers = [
         skills: ['Assembly', 'C', 'C++']
     },
 ];
+
+// // *1
+// const oldestDev = (devList) => {
+//     let chosen = devList[0];
+//     devList.forEach(dev => {
+//         chosen = (chosen.age < dev.age)? dev : chosen;
+//     });
+//     return chosen;
+// }
+
+// console.log(oldestDev(developers));
+
+// // *2
+// const cmprAge = (a, b) => {
+//     return a.age - b.age;
+// }
+
+// // !: MODIFIED THE SRC
+// console.log(developers.sort(cmprAge));
+
+// // *3
+// const getMaleDev = (devList) => {
+//     let res = [];
+//     devList.forEach(dev => {
+//         if (dev.gender === 'male') res.push(dev);
+//     });
+//     return res;
+// }
+
+// console.log(getMaleDev(developers));
+
+// // *4
+// const calcTotalAge = (devList) => {
+//     let tol = 0;
+//     devList.forEach(dev => {
+//         tol += dev.age;
+//     });
+//     return tol;
+// }
+
+// console.log(`Total age of the devs is ${calcTotalAge(developers)}.`);
+
+// // *5
+// const getSkillList = (devList) => {
+//     let skillList = new Set();
+//     devList.forEach(dev => {
+//         (dev.skills).forEach(skill => {
+//             skillList.add(skill);
+//         });
+//     });
+//     return skillList;
+// }
+
+// console.log(getSkillList(developers));
+
+// // *6
+// const mostSkilledDev = (devList) => {
+//     let chosen = devList[0];
+//     devList.forEach(dev => {
+//         chosen = (chosen.skills.length < dev.skills.length)? dev : chosen;
+//     });
+//     return chosen;
+// }
+
+// console.log(mostSkilledDev(developers));
+
+// // *7
+// const jSDev = developers.filter(dev => dev.skills.find(skill => skill === 'JS') !== undefined);
+
+// console.log(jSDev);
+
+// // *8
+// const maleJSDev = developers.filter(dev => ((dev.gender === 'male')&&(dev.skills.find(skill => skill === 'JS') !== undefined)));
+// console.log(maleJSDev);
+
+// // *9
+// const incrSkills = [...developers].sort((a, b) => a.skills.length - b.skills.length);
+// console.log(incrSkills);
+
+// // *10
+// const separatedGender = (devList) => {
+//     let res = {
+//         males: [],
+//         female: []
+//     };
+//     res.males = devList;
+//     for (let i = 0; i < devList.length; i++) {
+//         if (devList[i].gender === 'female') {
+//             res.female.push(devList[i]);
+//             devList.splice(i, 1);
+//             i--
+//         }
+//     }
+//     return res;
+// }
+
+// console.log(separatedGender(developers));
