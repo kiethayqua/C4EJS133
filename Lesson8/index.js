@@ -61,3 +61,55 @@ const developers = [
         skills: ['Assembly', 'C', 'C++']
     },
 ];
+
+
+// function maxAge(devs){
+//     let mx = 0;
+//     let dev = null;
+
+//     devs.forEach((item) => {
+//         if (item.age > mx){
+//             mx = item.age;
+//             dev = item;
+//         }
+//     });
+//     return dev;
+// }
+
+
+
+
+function sortAge(devs){
+    return devs.sort(function(a,b){return a.age - b.age});
+}
+console.log(sortAge(developers));
+
+
+function listMale(devs){
+    return devs.filter(function(a){return a.gender === 'male'})
+}
+console.log(listMale(developers));
+
+function sumDev(devs){
+    let sum = 0;
+    devs.forEach((item) => {
+        sum = sum + item.age;
+    });
+    return sum;
+}
+console.log(sumDev(developers));
+
+function getSkill(devs){
+    let skill = new Set();
+    devs.forEach(element => {
+        element.skills.forEach(item =>{
+            skill.add(item);
+        });
+    });
+    return skill;
+}
+console.log(getSkill(developers));
+
+function maxSkill(devs){
+    let maxSk = 
+}
