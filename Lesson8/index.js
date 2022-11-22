@@ -137,7 +137,7 @@ const developers = [
 // console.log(maleJSDev);
 
 // // *9
-// const incrSkills = [...developers].sort((a, b) => a.skills.length - b.skills.length);
+// const incrSkills = [...developers].sort((a, b) => b.skills.length - a.skills.length);
 // console.log(incrSkills);
 
 // // *10
