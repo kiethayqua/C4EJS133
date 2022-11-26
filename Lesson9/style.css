@@ -1,0 +1,29 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list{
+    list-style: none;
+}
+.todo-item {
+    display:flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.dlt-btn{
+    width:36px;
+    height: 36px;
+    /* background-color: blue; */
+}
