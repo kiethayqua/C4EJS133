@@ -1,29 +1,83 @@
-.center{
+* {
+    box-sizing: border-box;
+}
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container{
+#container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-#todo-list{
+#shopping-list {
     list-style: none;
-}
-.todo-item {
-    display:flex;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 8px 16px;
     border: 1px solid black;
     border-radius: 8px;
     justify-content: space-between;
-    margin-bottom: 8px;
+}
+.shopping-item {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    /* justify-content: space-between; */
+}
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    justify-content: space-between;
+    /* margin-bottom: 100px; */
 }
 
-.dlt-btn{
-    width:36px;
-    height: 36px;
-    /* background-color: blue; */
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.title {
+    margin: 8px;
+    font-size: small;
+    line-height: 14px;
+}
+.sell-list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.price {
+    font-size: small;
+    color: orange;
+}
+.sold {
+    font-size: small;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0px;
 }
