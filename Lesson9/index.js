@@ -8,7 +8,7 @@ const ITEMS = [
     },
     {
         id: 1,
-        title: "Tai nghe chụp tai không dây bluetooth STN28 màu sắc...",
+        title: "Tai nghe chụp tai không dây bluetooth STN28 màu sắc... ",
         image: "https://cf.shopee.vn/file/f2f227a59f6a5fb1eb1dc2893057aeab_tn",
         price: 60000,
         sold: 2500,
