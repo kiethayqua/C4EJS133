@@ -21,9 +21,40 @@
     position: relative;
 }
 
-.cart {
+.cart{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart ol{
     color: white;
     cursor: pointer;
+    display: none;
+    background-color: grey;
+}
+
+.cart:hover ol {
+    margin-top: 18px;
+    display: block;
+}
+
+
+
+li{
+    width: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.cart-items{
+    position: absolute;
+}
+
+.cart-item-image{
+    width: 22px;
+    height: 22px;
 }
 
 .quantity {

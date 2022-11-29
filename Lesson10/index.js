@@ -137,22 +137,55 @@ ITEMS.forEach((item) => {
     </div>
     `
 });
-
 list.innerHTML = finalHTML;
 
 const cartButton = document.getElementById('cart');
 const quantity = document.getElementById('quantity');
+const cart_items = document.getElementById('cart-items');
+
+
+let max_chars = 10;
+function render(arr)
+{
+    let cartHTML = ``;
+    arr.forEach((item)=>{ cartHTML += `
+    <li>
+        <div class="left">      
+            <img
+                src="${item.image}"
+                alt=""
+                class="cart-item-image"
+            />        
+            <span>${item.name <= max_chars ? item.name : 
+                                            item.name.substring(0,max_chars) + `...`}
+            </span>
+            <span>đ${modifyPrice(item.price)}</span>
+              </div>
+        <div class="right">x${item.quantity}</div>
+    </li>
+    `});
+    cart_items.innerHTML = cartHTML;
+}
+
 let count = 0;
 let carts = [];
 
 function logName(id) {
     const item = ITEMS.find((item) => `${item.id}` === `${id}`);
     const index = carts.findIndex(i => i.id === id);
-    if (index !== -1) {
-        carts[index].quantity += 1;
-    } else {
+    if (index !== -1) 
+    {
+        carts[index].quantity += 1, count++;
+        quantity.innerHTML = `${count}`;
+    } 
+    else 
+    {
+        count++;
+        quantity.innerHTML = `${count}`;
         carts.push({ ...item, quantity: 1 });
     }
+    render(carts);
 
     console.log(carts);
 }
+
