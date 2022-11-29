@@ -139,7 +139,7 @@ ITEMS.forEach((item) => {
 });
 
 list.innerHTML = finalHTML;
-
+let giohang = document.getElementById('newcart');
 const cartButton = document.getElementById('cart');
 const quantity = document.getElementById('quantity');
 let count = 0;
@@ -152,7 +152,36 @@ function logName(id) {
         carts[index].quantity += 1;
     } else {
         carts.push({ ...item, quantity: 1 });
+        count++;
     }
-
+    
+    quantity.innerHTML = count;
     console.log(carts);
+    while (giohang.firstChild) {
+        giohang.removeChild(giohang.lastChild);
+    }
+    carts.forEach(element =>{
+        let newItem1 = document.createElement('img');
+        newItem1.src = element.image;
+        giohang.appendChild(newItem1); 
+
+        let newItem2 = document.createElement('div');
+        newItem2.innerHTML = element.name;
+        giohang.appendChild(newItem2); 
+    
+        let newItem3 = document.createElement('div');
+        newItem3.innerHTML = element.name;
+        giohang.appendChild(newItem3); 
+    
+        let newItem4 = document.createElement('div');
+        newItem4.innerHTML = "So luong  x" + element.quantity;
+        giohang.appendChild(newItem4); 
+
+        let line = document.createElement('hr');
+        giohang.appendChild(line);
+    })
 }
+let a = document.querySelector('#newcart');
+/* function display(){
+    giohang.display = block;
+} */

@@ -5,7 +5,9 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .header {
     width: 100%;
     height: 200px;
@@ -24,8 +26,37 @@
 .cart {
     color: white;
     cursor: pointer;
+    position: relative;
 }
 
+#newcart{
+    position: absolute;
+    display: none;
+    width: 450px;
+    max-height: 400px;
+    overflow: auto;
+    font-size: 11px;
+    background-color: rgb(255, 131, 131);
+}
+#newcart::-webkit-scrollbar {
+    width: 1em;
+}
+   
+#newcart::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#newcart::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+#newcart img{
+    width: 50px;
+    height: 50px;
+}
+.cart:hover  #newcart{
+    display: block;
+}
 .quantity {
     width: 20px;
     height: 20px;
