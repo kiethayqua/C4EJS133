@@ -1,0 +1,24 @@
+<<<<<<< Updated upstream
+=======
+*{
+    background-color: aliceblue;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nation_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+}
+.nation{
+    margin: 20px 40px;
+}
+.flag img{
+    width: 216px;
+    height: 144px;
+}
+>>>>>>> Stashed changes
