@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 // const ITEMS = [
 //     {
 //         id: 0,
@@ -152,4 +151,4 @@ function createItemList(item){
 ITEMS.forEach(item => {
     createItemList(item);
 })
->>>>>>> Stashed changes
+
