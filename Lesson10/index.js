@@ -144,7 +144,7 @@ const quantity = document.getElementById('quantity');
 const cart_items = document.getElementById('cart-items');
 
 
-let max_chars = 10;
+let max_chars = 13;
 function render(arr)
 {
     let cartHTML = ``;
@@ -156,7 +156,7 @@ function render(arr)
                 alt=""
                 class="cart-item-image"
             />        
-            <span>${item.name <= max_chars ? item.name : 
+            <span>${item.name <= max_chars -3 ? item.name : 
                                             item.name.substring(0,max_chars) + `...`}
             </span>
             <span>đ${modifyPrice(item.price)}</span>
