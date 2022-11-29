@@ -163,7 +163,10 @@ function logName(id) {
     carts.forEach(element =>{
         let newItem1 = document.createElement('img');
         newItem1.src = element.image;
-        giohang.appendChild(newItem1); 
+
+        let wrapper = document.createElement('div');
+        wrapper.appendChild(newItem1);
+        giohang.appendChild(wrapper); 
 
         let newItem2 = document.createElement('div');
         newItem2.innerHTML = element.name;

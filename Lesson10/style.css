@@ -38,15 +38,19 @@ html {
     font-size: 11px;
     background-color: rgb(255, 131, 131);
 }
-#newcart::-webkit-scrollbar {
+#newcart div{
+    display: flex;
+    flex-wrap: wrap;
+}
+html::-webkit-scrollbar {
     width: 1em;
 }
    
-#newcart::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-#newcart::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
 }
