@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.item_list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  
+    flex-wrap: wrap; 
+    background-color: grey;
+}
+
+.item{
+    /* background-color: #FFF7DF; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 10px;
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+}
+
+.item--bottom{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
