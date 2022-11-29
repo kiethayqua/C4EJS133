@@ -1,54 +1,89 @@
-// const ITEMS = [
-//     {
-//         id: 0,
-//         title: 'I will wake up at 8 in the morning'
-//     },
-//     {
-//         id: 1,
-//         title: 'I will code at 9 in the morning'
-//     },
-//     {
-//         id: 2,
-//         title: 'I will eat at 12 in the morning'
-//     },
-//     {
-//         id: 3,
-//         title: 'I will sleep at 13 in the morning'
-//     }
-// ];
+const ITEMS = [{
+    id: 0,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 2,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 3,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 4,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 5,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 6,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 7,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 8,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 9,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+{
+    id: 10,
+    title: 'Mô hình Kimetsu No Yaiba figure Demon Slayer Agatsuma Zenitsu cao 16 cm - figure thanh gươm diệt quỷ',
+    image: 'https://cf.shopee.vn/file/124a8a430211ad5aa26e087ccbd45796_tn',
+    price: 59000,
+    sold: 2500,
+},
+]
 
-// const list = document.getElementById('todo-list');
-
-// function createItemList(item) {
-
-//     // create img element
-//     const img = document.createElement('img');
-//     img.style.width = '24px';
-//     img.style.height = '24px';
-//     img.alt = 'icon';
-//     img.src = 'icons8-trash-can-48.png';
-
-//     // create img wrapper
-//     const imgWrapper = document.createElement('div');
-//     imgWrapper.classList.add('delete-btn', 'center');
-//     imgWrapper.appendChild(img);
-
-//     // create span 
-//     const title = document.createElement('span');
-//     title.innerHTML = item.title;
-
-//     // list item element
-//     const itemWrapper = document.createElement('li');
-//     itemWrapper.classList.add('todo-item');
-//     itemWrapper.appendChild(title);
-//     itemWrapper.appendChild(imgWrapper);
-
-//     list.appendChild(itemWrapper);
-// }
-
-// ITEMS.forEach(item => {
-//     createItemList(item);
-// });
-
-
-
+const List = document.getElementById('todo-list')
+ITEMS.forEach(item=>{
+    numsold =  Math.abs(item.sold) > 999 ? Math.sign(item.sold)*((Math.abs(item.sold)/1000).toFixed(1)) + 'k' : Math.sign(item.sold)*Math.abs(item.sold)
+   List.innerHTML +=`
+   <li class="todo-item">
+   <img src="${item.image}" alt="">
+   <span>${item.title}</span>
+   <div class="price">
+       <span>₫${item.price}</span>
+       <div class="sold">Đã bán ${numsold}</div>
+   </div>
+   <div class="cart-hover">
+   <span>Tìm sản phẩm tương tự</span>
+ </div>
+</li>
+   ` 
+})

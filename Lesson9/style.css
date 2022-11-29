@@ -1,26 +1,83 @@
-.center {
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container {}
-
 #todo-list {
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 100px;
+
     list-style: none;
+
 }
 
 .todo-item {
+    height: 160px;
     display: flex;
     align-items: center;
-    padding: 8px 16px;
-    border: 1px solid black;
+    cursor: pointer;
+    margin: 5px 10px;
     border-radius: 8px;
-    justify-content: space-between;
-    margin-bottom: 8px;
+    flex-direction: column;
+
 }
 
-.delete-btn {
-    width: 36px;
-    height: 36px;
+.todo-item:hover {
+
+    border-top: 1px solid #fb5731;
+    border-left: 1px solid #fb5731;
+    border-right: 1px solid #fb5731;
+}
+
+.price {
+    margin-top: 5px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item span {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 9px;
+    max-width: 100px;
+}
+
+.cart-hover {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: #fb5731;
+    padding: 5px 10px;
+    color: #fff;
+    max-width: 100px;
+    display: none;
+}
+
+.todo-item:hover .cart-hover {
+    display: block;
+}
+
+.todo-item img {
+    max-width: 104px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.sold {
+    font-size: 9px;
+    color: rgba(0, 0, 0, .54)
 }
