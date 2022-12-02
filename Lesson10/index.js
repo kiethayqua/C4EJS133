@@ -109,6 +109,10 @@ const ITEMS = [
 const list = document.getElementById('list');
 let finalHTML = '';
 
+const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function modifyPrice(price) {
     let priceRevertArr = `${price}`.split('').reverse();
     let count = 0;
@@ -126,14 +130,17 @@ function modifyPrice(price) {
 ITEMS.forEach((item) => {
     finalHTML += `
     <div class="item" onclick="logName(${item.id})">
-        <img class="item-image" alt="image" src="${item.image}">
-        <div class="item-content">
-            <div class="item-name">${item.name}</div>
-            <div class="item-footer">
-                <div class="item-price">đ${modifyPrice(item.price)}</div>
-                <div class="item-sold">Đã bán ${item.sold}</div>
+        <div class="item-info">
+            <img class="item-image" alt="image" src="${item.image}">
+            <div class="item-content">
+                <div class="item-name">${item.name}</div>
+                <div class="item-footer">
+                    <div class="item-price">đ${numberWithCommas(item.price)}</div>
+                    <div class="item-sold">Đã bán ${item.sold}</div>
+                </div>
             </div>
         </div>
+        <div class="item-hover-bottom">Thêm vào giỏ hàng</div>
     </div>
     `
 });
@@ -154,5 +161,45 @@ function logName(id) {
         carts.push({ ...item, quantity: 1 });
     }
 
+    quantity.innerHTML = `${carts.length}`;
+
     console.log(carts);
+    displayCart(carts)
+}
+
+let cart = document.getElementById('cart');
+cart.addEventListener('click', () => {
+    let cartPopup = document.getElementById('cart-popup');
+    let cartVi = cartPopup.style.visibility;
+    cartPopup.style.visibility = (cartVi === 'visible')? 'hidden' : 'visible';
+
+    // Data
+    displayCart(carts);
+});
+
+const reducedName = (name) => {
+    return (name.length > 31)? `${name.slice(0, 28)}...` : name;
+}
+
+const displayCart = (carts) => {
+    let cartPopup = document.getElementById('cart-popup');
+    
+    cartPopup.innerHTML = `
+    <div id="cart-popup-title">Sản phẩm mới thêm</div>
+    `;
+
+    carts.forEach(item => {
+        cartPopup.innerHTML += `
+        <div class="cart-item">
+            <img class="cart-item-image" alt="image" src="${item.image}">
+            <div class="cart-item-info">
+                <div class="cart-item-tite">${reducedName(item.name)}</div>
+                <div class="cart-item-priceAndQuantity">
+                    <div class="cart-item-price">đ${numberWithCommas(item.price)}</div>
+                    <div class="cart-item-quantity">${item.quantity}</div>
+                </div>
+            </div>
+        </div>
+        `;
+    });
 }
