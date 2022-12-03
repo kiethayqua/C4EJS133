@@ -113,10 +113,10 @@ function modifyPrice(price) {
     let priceRevertArr = `${price}`.split('').reverse();
     let count = 0;
     let newArr = [];
-    priceRevertArr.forEach((word) => {
+    priceRevertArr.forEach((word, index) => {
         newArr.push(word);
         count++;
-        if (count % 3 === 0) {
+        if (count % 3 === 0 && index !== priceRevertArr.length - 1) {
             newArr.push(',')
         }
     });
