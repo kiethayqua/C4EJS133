@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #fb5a4b;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+
+}
+
+.list-input {
+    display: flex;
+}
+
+.list-inputText {
+    width: 250px;
+    padding: 4px 4px;
+}
+
+::placeholder {
+    color: #757575;
+    font-size: 8px;
+}
+
+.btn-submit {
+    cursor: pointer;
+    padding: 6px;
+    text-align: center;
+    font-size: 12px;
+    border: 0.7px solid rgb(194, 194, 194);
+    background: none;
+    color: #fff;
+}
+
+.list-form {
+    color: #fff;
+    margin-top: 7px;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#Item {
+    padding-left: 4px;
+}
+
+.list-checked {
+    margin-top: 10px;
+}
+
+.check-wrapper {
+    letter-spacing: 0.7px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
