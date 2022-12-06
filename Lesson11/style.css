@@ -63,15 +63,37 @@ h3 {
     padding-left: 4px;
 }
 
-.list-checked {
+#list-checked {
+    height: 200px;
     margin-top: 10px;
 }
 
 .check-wrapper {
+    justify-content: space-between;
     letter-spacing: 0.7px;
     display: flex;
     align-items: center;
     color: #fff;
     font-size: 12px;
     margin-bottom: 6px;
+}
+.done {
+    text-decoration: line-through;
+}
+#label-text{
+    padding-left: 4px;
+}
+.wrapper-info{
+    display: flex;
+}
+.btn-delete{
+    background: #9361bf;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 9px;
+}
+.btn-delete:hover{
+    opacity: 0.7;
 }

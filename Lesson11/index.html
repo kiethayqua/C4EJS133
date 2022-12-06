@@ -13,8 +13,8 @@
     <div class="list">
         <h3>Todo List</h3>
         <div class="list-input">
-            <input type="text" name="" id="" class="list-inputText" placeholder="Nhập công việc">
-            <input type="submit" value="Thêm" class="btn-submit">
+            <input type="text" name="" id="probleminput" class="list-inputText" placeholder="Nhập công việc">
+            <input type="submit" value="Thêm" id="btn-submit" class="btn-submit">
         </div>
         <form action="" class="list-form">
             <input type="radio" name="seclectedItem" id="all" style="margin-left: 10px;">
@@ -24,18 +24,25 @@
             <input type="radio" name="seclectedItem" id="done" style="margin-left: 10px;">
             <label for="done">Hoàn thành</label>
         </form>
-        <form action="" class="list-checked">
-            <div class="check-wrapper">
-                <input type="checkbox" name="" id="">
-                <label for="">Làm bài tập javascript</label>
+        <form action="" id="list-checked">
+            <!-- <div class="check-wrapper">
+                <div class="wrapper-info">
+                    <input type="checkbox" name="seclectedItem" id="">
+                    <label for="">Làm bài tập javascript</label>
+                </div>
+              <button id="btn-delete" class="btn-delete">Xóa</button>
             </div>
             <div class="check-wrapper">
-                <input type="checkbox" name="" id="">
-                <label for="">Mua đồ ăn</label>
-            </div>
-        
+                <div class="wrapper-info">
+                    <input type="checkbox" name="seclectedItem" id="">
+                    <label for="">Làm bài tập javascript</label>
+                </div>
+              <button class="btn-delete">Xóa</button>
+            </div> -->
+
         </form>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
