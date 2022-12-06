@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2>Todo List</h2>
+        </div>
+        <div id="task-operation-wrapper">
+            <div id="task-create-container">
+                <form id="task-generator">
+                    <input id="form-content" type="text" placeholder="Nhập công việc">
+                    <button id="task-add-btn" type="submit">THÊM</button>
+                </form>
+            </div>
+            <div id="task-filter-container">
+                <form id="task-filter">
+                    <div class="radio-container">
+                        <input type="radio" id="all-task" name="task-type" value="All" checked>
+                        <label for="all-task">All</label><br>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="not-done-task" name="task-type" value="Not-done">
+                        <label for="not-done-task">Chưa hoàn thành</label><br>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="done-task" name="task-type" value="Done">
+                        <label for="done-task">Đã hoàn thành</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="task-view">
+            <div class="task-wrapper">
+                <div class="task-container">
+                    <input type="checkbox" class="isDone">
+                    <p>Do something.</p>
+                </div>
+            </div>
+            <div class="task-wrapper">
+                <div class="task-container">
+                    <input type="checkbox" class="isDone">
+                    <p>Do something.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

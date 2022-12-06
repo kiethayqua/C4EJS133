@@ -1,0 +1,154 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+   html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+   body{line-height:1}
+   article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+   nav ul{list-style:none}
+   blockquote,q{quotes:none}
+   blockquote:before,blockquote:after,q:before,q:after{content:none}
+   a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+   mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+   del{text-decoration:line-through}
+   abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+   table{border-collapse:collapse;border-spacing:0}
+   hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+   input,select{vertical-align:middle}
+   li{list-style:none}
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(247, 135, 122);
+    color: white;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-operation-wrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+#header h2 {
+    font-size: xx-large;
+}
+
+#task-create-container {
+    width: 100%;
+    display: flex;
+}
+
+#task-generator {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+#task-generator input {
+    /* height: 40px; */
+    flex: 1;
+    border-color: white;
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+#task-add-btn {
+    /* width: 60px; */
+    background: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#task-add-btn:hover, .radio-container:hover {
+    background-color: white;
+    color: rgb(247, 135, 122);
+}
+
+#task-filter-container {
+    width: 100%;
+    display: flex;
+    
+}
+
+#task-filter {
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.radio-container {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+#task-view {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-wrapper {
+    width: 100%;
+    background-color: rgb(247, 149, 138);
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-container {
+    width: 500px;
+    /* height: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    padding: 10px;
+}
+
+.task-container p {
+    flex-grow: 1;
+}
+
+.doneTask {
+    text-decoration: line-through;
+    font-style: italic;
+}
