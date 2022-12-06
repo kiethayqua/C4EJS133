@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(38, 153, 173);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: white;
+}
+
+.container {
+    width: 700px;
+}
+
+.header {
+    padding: 0 50px;
+    width: 100%;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addBtn {
+    padding: 10px;
+}
+
+.task-input {
+    display: flex;
+    width: 100%;
+}
+.search-input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 4px;
+}
+button {
+    margin: 2px;
+    border: none;
+    border-radius: 0;
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(198, 198, 198);
+    padding: 10px;
+    width: 85%;
+}
+
+.todo-list {
+    list-style: none;
+    margin-bottom: 10 px;
+}
+
+.todo-item {
+    margin-bottom: 10px;
+    width: 85.5%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    opacity: 0.8;
+    border-bottom: 2px solid white;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.done span {
+    text-decoration: line-through;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+.tick {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tick::before {
+    content: "✓";
+    font-size: 20px;
+    display: none;
+}
+
+.done .tick::before {
+    display: inline;
+}
+.delete-todo {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.delete-todo img {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+}

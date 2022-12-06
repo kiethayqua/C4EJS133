@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="todo-wrapper center">
+                <div id="myDIV" class="header">
+                    <h2 class="center">Todo List</h2>
+                    <form class="task-input js-form">
+                        <input
+                            class="search-input js-todo-input"
+                            type="text"
+                            id="myInput"
+                            placeholder="New task..."
+                        />
+                        <button class="addBtn">Thêm</button>
+                    </form>
+                    <form class="filter">
+                        <input type="radio" />
+                        <label>All</label>
+                        <input type="radio" />
+                        <label>In progress</label>
+                        <input type="radio" />
+                        <label>Done</label>
+                    </form>
+                </div>
+            </div>
+
+            <ul class="todo-list js-todo-list"></ul>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
