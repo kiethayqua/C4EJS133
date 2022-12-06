@@ -1,0 +1,55 @@
+*{
+    background-color: rgba(255,102,102,255);
+    color: white;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 700px;
+    margin: 0 500px;
+}
+.Title{
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+.Enter_task_name{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Input_task_name{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    height: 50px;
+    margin: 20px 0px;
+}
+#task_name{
+    width: 80%;
+    color: black;
+    background-color: white;
+    border-color: rgb(255, 255, 255);
+}
+::placeholder{
+    border-color: white;
+}
+.select_list div{
+    border: 0.5px solid white;
+    padding: 5px;
+    margin: 0px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-btn{
+    width: 20%;
+    border-color: white;
+}
+.select_list{
+    display: flex;
+    justify-content: flex-end;
+}
+.done {
+    text-decoration: line-through;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class = container>
+        <div class="Title">Todo List</div>
+        <div class="Enter_task_name">
+            <div class="Input_task_name">
+                <input type="text" id="task_name" placeholder="Nhập công việc">
+                <button id="add-btn">THÊM</button>
+            </div>
+            <div class="select_list">
+                <div> <input type="radio" id="all-btn" name="select_item">All </div>
+                <div> <input type="radio" id="not-done-btn" name="select_item">Chưa hoàn thành </div>
+                <div> <input type="radio" id="done-btn" name="select_item">Hoàn thành </div>
+            </div>
+        </div>
+        <form id="list">
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
