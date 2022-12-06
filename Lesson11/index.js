@@ -1,27 +1,32 @@
-const tasks = [
-    {
-        content: 'JavaScript Exercises: Array + String JavaScript Exercises: Array + String JavaScript Exercises: Array + String JavaScript Exercises: Array + String JavaScript Exercises: Array + String',
-        id: 1,
-        isDone: true
-    },
-    {
-        content: 'Buy lunch',
-        id: 2,
-        isDone: false
-    },
-    {
-        content: 'Cpp: OOP + String',
-        id: 3,
-        isDone: true
-    },
-    {
-        content: 'Buy teddy bear',
-        id: 4,
-        isDone: false
-    }
+// GOOD: init with empty value
+let tasks = [
+    // {
+    //     content: 'JavaScript Exercises: Array + String JavaScript Exercises: Array + String JavaScript Exercises: Array + String JavaScript Exercises: Array + String JavaScript Exercises: Array + String',
+    //     id: 1,
+    //     isDone: true
+    // },
+    // {
+    //     content: 'Buy lunch',
+    //     id: 2,
+    //     isDone: false
+    // },
+    // {
+    //     content: 'Cpp: OOP + String',
+    //     id: 3,
+    //     isDone: true
+    // },
+    // {
+    //     content: 'Buy teddy bear',
+    //     id: 4,
+    //     isDone: false
+    // }
 ];
 
-let taskCnt = 4;
+
+// GOOD: auto id should be init from 0
+// let taskCnt = 4;
+let taskCnt = 0;
+
 const view = document.getElementById('task-view');
 let form = document.getElementById('task-generator');
 let formInput = document.getElementById('form-content');
@@ -48,12 +53,16 @@ const formValidation = () => {
 }
 
 const addTask = () => {
-    let newTask = {};
-    newTask['content'] = formInput.value;
-    newTask['isDone'] = false;
-    newTask['id'] = ++taskCnt;
-    console.log(newTask);
-    tasks.push(newTask);
+    // newTask['content'] = formInput.value;
+    // newTask['isDone'] = false;
+    // newTask['id'] = ++taskCnt;
+
+    // GOOD: shorter
+    tasks.push({
+        id: ++taskCnt,
+        content: formInput.value,
+        isDone: false
+    });
     // loadNewTask(newTask);
     filterNoneBtn.checked = true;
     loadAllTask(tasks);
@@ -83,14 +92,18 @@ const addHTMLElement = (task) => {
     view.innerHTML += `
     <div class="task-wrapper">
         <div class="task-container" id="task-${task.id}">
-            <input type="checkbox" class="isDone" ${(task.isDone)? 'checked' : ''}>
-            <p class="${(task.isDone)? "doneTask" : ""}">${task.content}</p>
+            <input type="checkbox" class="isDone" ${(task.isDone) ? 'checked' : ''}>
+            <p class="${(task.isDone) ? "doneTask" : ""}">${task.content}</p>
             <i onClick="deleteTask(this)" class="fas fa-trash-alt"></i>
         </div>
     </div>
     `;
     // let taskContainer = document.getElementById(`task-${task.id}`);
     // addCheckEvent(taskContainer);
+}
+
+const getItemIndex = (id) => {
+    return tasks.findIndex(task => `task-${task.id}` === id);
 }
 
 const loadAllTask = (tasks) => {
@@ -105,14 +118,14 @@ const loadAllTask = (tasks) => {
     checkboxes.forEach((checkBox) => {
         checkBox.addEventListener('change', () => {
             let taskContainer = checkBox.parentElement;
-            let id = taskContainer.id.slice(5);
+            let selectedIndex = getItemIndex(taskContainer.id);
             if (checkBox.checked) {
                 taskContainer.querySelector(`#${taskContainer.id} p`).classList.add('doneTask');
             }
             else {
                 taskContainer.querySelector(`#${taskContainer.id} p`).classList.remove('doneTask');
             }
-            tasks[id - 1]['isDone'] = !tasks[id - 1]['isDone'];
+            tasks[selectedIndex]['isDone'] = !tasks[selectedIndex]['isDone'];
             console.log('task state changed');
         });
     });
@@ -120,26 +133,26 @@ const loadAllTask = (tasks) => {
 
 const loadNewTask = (newTask) => {
     addHTMLElement(newTask);
-    let checkboxes = document.querySelectorAll('input[class=isDone]');
-    let checkBox = checkboxes[checkboxes.length - 1];
-    checkBox.addEventListener('change', () => {
-        let taskContainer = checkBox.parentElement;
-        let id = taskContainer.id.slice(5);
-        console.log(id);
-        if (checkBox.checked) {
-            taskContainer.querySelector(`p`).classList.add('doneTask');
-        }
-        else {
-            taskContainer.querySelector(`p`).classList.remove('doneTask');
-        }
-        tasks[id - 1]['isDone'] = !tasks[id - 1]['isDone'];
-        console.log('task state changed');
-    });
+    // let checkboxes = document.querySelectorAll('input[class=isDone]');
+    // let checkBox = checkboxes[checkboxes.length - 1];
+    // checkBox.addEventListener('change', () => {
+    //     let taskContainer = checkBox.parentElement;
+    //     let id = taskContainer.id.slice(5);
+    //     console.log(id);
+    //     if (checkBox.checked) {
+    //         taskContainer.querySelector(`p`).classList.add('doneTask');
+    //     }
+    //     else {
+    //         taskContainer.querySelector(`p`).classList.remove('doneTask');
+    //     }
+    //     tasks[id - 1]['isDone'] = !tasks[id - 1]['isDone'];
+    //     console.log('task state changed');
+    // });
 }
 
 const deleteTask = (e) => {
-    let id = e.parentElement.id.slice(5);
-    tasks.splice(id - 1, 1);
+    let index = getItemIndex(e.parentElement.id);
+    tasks.splice(index, 1);
     loadAllTask(tasks);
 }
 
